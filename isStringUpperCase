@@ -1,0 +1,5 @@
+method added to String checks if string is uppercase and returns true; 
+
+String.prototype.isUpperCase = function() {
+  return this.toUpperCase() == this; 
+}
