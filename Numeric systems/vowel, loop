@@ -1,0 +1,27 @@
+Given an array of numbers, check if any of the numbers are the character codes for lower case vowels (a, e, i, o, u).
+
+If they are, change the array value to a string of that vowel.
+
+Return the resulting array.
+
+
+function isVow(a){
+for (var i=0; i<a.length; i++){
+  if (String.fromCharCode(a[i])=='a'){
+    a[i]='a'; 
+  }
+  else if (String.fromCharCode(a[i])=='e'){
+    a[i]='e'; 
+  }
+  else if (String.fromCharCode(a[i])=='i'){
+    a[i]='i'; 
+  }
+  else if (String.fromCharCode(a[i])=='o'){
+    a[i]='o'; 
+  }
+  else if (String.fromCharCode(a[i])=='u'){
+    a[i]='u'; 
+  }
+}
+return a; 
+} 
