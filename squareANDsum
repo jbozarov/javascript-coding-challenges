@@ -1,0 +1,8 @@
+numbers are array; 
+
+function squareSum(numbers){
+ if (numbers.length<1){
+ return 0
+ }
+ else return numbers.map((a) =>a**2).reduce((a, b) => a+b); 
+}
