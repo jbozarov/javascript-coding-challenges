@@ -1,0 +1,6 @@
+write a function getASCII which inputs a character and returns the corresponding ascii value 
+
+
+function getASCII(c){
+  return c.charCodeAt(0); 
+}
