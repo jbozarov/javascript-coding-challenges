@@ -1,0 +1,16 @@
+Given a year, return the century it is in.
+
+
+
+
+function century(year) {
+if (year<100){
+return 1
+}
+else if (year/100 === parseInt(year/100)){
+  return year/100; 
+}
+else if (year/100 !== parseInt(year/100)){
+  return parseInt(year/100)+1; 
+}
+}
