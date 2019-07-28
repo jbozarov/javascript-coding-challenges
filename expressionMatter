@@ -1,0 +1,9 @@
+Task
+Given three integers a ,b ,c, return the largest number obtained after inserting the following operators and brackets: +, *, ().
+
+function expressionMatter(a, b, c) {
+  var arr = []; 
+  arr.push(a*(b*c), a+(b+c), a*(b+c), (a+b)*c)
+  arr.sort((a, b) => b-a); 
+  return arr[0]
+}
