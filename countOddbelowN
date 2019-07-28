@@ -1,0 +1,5 @@
+count all odd numbers that smaller than n, but greater than 0; 
+
+function oddCount(n){
+  return Math.floor(n/2); 
+}
