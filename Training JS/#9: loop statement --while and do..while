@@ -1,0 +1,22 @@
+Coding in function ```padIt```, function accept 2  parameters:
+
+1.```str```,  it's a string representing the string to pad, we need pad some ```"*"``` at 
+leftside or rightside of ```str```
+
+2.```n```, it's a number, how many times to pad the string.
+
+
+
+	var i=1; 
+	while (i<=n){
+	i++; 
+		if (i%2==0){
+			arr.unshift('*'); 
+		}
+		else if (i%2!==0){
+			arr.push('*'); 
+		}
+	}
+	return arr.join(''); 
+	}
+
