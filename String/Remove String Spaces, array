@@ -1,0 +1,5 @@
+remove string spaces 
+
+function noSpace(x){
+   return x.split(' ').map((a)=>a.trim()).join(''); 
+}
