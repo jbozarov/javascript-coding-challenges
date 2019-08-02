@@ -1,0 +1,13 @@
+Your job is to find the gravitational force between two spherical objects (obj1 , obj2).
+
+input
+Two arrays are give :
+
+arr_val (value array), consists of 3 elements
+1st element : mass of obj 1
+2nd element : mass of obj 2
+3rd element : distance between their centers
+arr_unit (unit array), consists of 3 elements
+1st element : unit for mass of obj 1
+2nd element : unit for mass of obj 2
+3rd element : unit for distance between their centers
