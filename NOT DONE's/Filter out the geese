@@ -13,3 +13,11 @@ the 'geese' removed. Note that all of the strings will be in the same case as th
 
 
 MY TRY: 
+
+
+
+
+function gooseFilter (arr){
+	geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]; 
+	return arr.filter((val)=>!geese.includes(val)); 
+}
