@@ -1,0 +1,8 @@
+function stringy(size){
+	var result =''; 
+	for (var i=0; i<size; i++){
+		  if (i%2==0) result+='1'; 
+			else result+='0'; 
+	}
+	return result//.length
+}
