@@ -1,0 +1,24 @@
+
+
+
+
+function sc(said,suspects){
+  var f = said.charAt(0); 
+	var fu = f.toUpperCase(); 
+	var l = said.charAt(said.length-1);
+	var lu = l.toLowerCase(); 
+	var arr = [];  
+
+	for (var i=0; i<suspects.length; i++){
+		var last = suspects[i].split(' '); 
+		if ((suspects[i].charAt(0)==f || suspects[i].charAt(0)==fu)		
+		    && ((suspects[i].charAt(suspects[i].length-1)==l || suspects[i].charAt(suspects[i].length-1)==lu)		
+		    || (last[0].charAt(last[0].length-1)==l || last[0].charAt(last[0].length-1)==lu))) {
+			    arr.push(suspects[i])
+		    }
+		  arr.push('')
+	}
+	var result = arr.filter((a)=>a!==''); 	 
+	if (result.length<1) return ''; 
+	else return result.join(', '); 
+}
