@@ -1,0 +1,10 @@
+function sc (floor){
+	var aa = 'Aa~ '
+	if (floor<=1) return ''; 	
+	else if (floor<=6){
+		return aa.repeat(floor-1)+'Pa! Aa!'; 
+	}
+	else if (floor>6){
+		return aa.repeat(floor-1)+'Pa!'; 
+	}
+}
