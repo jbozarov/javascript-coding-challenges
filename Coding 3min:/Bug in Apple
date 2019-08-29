@@ -1,0 +1,10 @@
+Find out "B"(Bug) in a lot of "A"(Apple). 
+There will always be one bug in apple, not need to consider the situation that without bug or more than one bugs.
+input: string Array ```apple```
+output: Location of "B", ```[x,y]```
+
+
+function sc(apple){
+  var x = apple.filter((a)=>a.includes('B'))[0];  
+	return [apple.indexOf(x), x.indexOf('B')]; 
+}
