@@ -1,0 +1,51 @@
+Summer is coming, John has some watermelon to eat. When he eats a piece of watermelon into his mouth, if there are more than 5 watermelon seeds, John spit them out; if not, John will swallow them down.
+
+Give you a parameter ```watermelon```(2D number array, 8x8), 0 is the watermelon flesh, 1 is the watermelon seed.
+```
+1,0,0,1,1,1,0,1
+1,0,1,0,1,1,0,0
+1,1,1,1,0,0,0,0
+0,1,0,1,1,1,1,0
+0,0,0,1,0,1,0,0
+1,1,1,0,0,0,1,1
+1,0,1,1,0,0,0,0
+0,0,0,0,0,0,0,0
+```
+John eats 1/4 every time(4x4 matrix)...
+
+```
+1,0,0,1,1,1,0,1      x,x,x,x,1,1,0,1      x,x,x,x,x,x,x,x
+1,0,1,0,1,1,0,0      x,x,x,x,1,1,0,0      x,x,x,x,x,x,x,x
+1,1,1,1,0,0,0,0      x,x,x,x,0,0,0,0      x,x,x,x,x,x,x,x
+0,1,0,1,1,1,1,0      x,x,x,x,1,1,1,0      x,x,x,x,x,x,x,x
+0,0,0,1,0,1,0,0  ==> 0,0,0,1,0,1,0,0  ==> 0,0,0,1,0,1,0,0
+1,1,1,0,0,0,1,1      1,1,1,0,0,0,1,1      1,1,1,0,0,0,1,1
+1,0,1,1,0,0,0,0      1,0,1,1,0,0,0,0      1,0,1,1,0,0,0,0
+0,0,0,0,0,0,0,0      0,0,0,0,0,0,0,0      0,0,0,0,0,0,0,0
+
+                     x,x,x,x,x,x,x,x      x,x,x,x,x,x,x,x
+                     x,x,x,x,x,x,x,x      x,x,x,x,x,x,x,x
+                     x,x,x,x,x,x,x,x      x,x,x,x,x,x,x,x
+                     x,x,x,x,x,x,x,x      x,x,x,x,x,x,x,x
+                 ==> x,x,x,x,0,1,0,0  ==> x,x,x,x,x,x,x,x
+                     x,x,x,x,0,0,1,1      x,x,x,x,x,x,x,x
+                     x,x,x,x,0,0,0,0      x,x,x,x,x,x,x,x
+                     x,x,x,x,0,0,0,0      x,x,x,x,x,x,x,x
+
+```
+Return a number that John spit out how much the watermelon seeds.
+
+
+
+function sc(arr){
+	var first = arr.slice(0, 4).map(a=>a.slice(0, 4)); 
+	var fir =  first.map(a=>a.reduce((a, b)=>a+b)).reduce((a, b)=>a+b, 0); 
+	var second = arr.slice(0, 4).map(a=>a.slice(4, 8)); 
+	var sec = second.map(a=>a.reduce((a, b)=>a+b)).reduce((a, b)=>a+b, 0); 
+  var third = arr.slice(4, 8).map(a=>a.slice(0, 4)); 
+	var thir = third.map(a=>a.reduce((a, b)=>a+b)).reduce((a, b)=>a+b, 0);
+	var fourth = arr.slice(4, 8).map(a=>a.slice(4, 8)); 
+	var fort = fourth.map(a=>a.reduce((a, b)=>a+b)).reduce((a, b)=>a+b, 0);
+  
+	return [fir, sec, thir, fort].filter(a=>a>5).reduce((x, y)=>x+y, 0); 
+}
