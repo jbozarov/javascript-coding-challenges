@@ -1,0 +1,8 @@
+function tailAndHead(arr) {
+   var res=[]; 
+   var arr1=arr.map(a=>a.toString().split('')); 
+   for (var i=0; i<arr1.length-1; i++){
+      res.push(Number(arr1[i].slice(arr1[i].length-1))+Number(arr1[i+1].slice(0, 1))); 
+   }
+    return res.reduce((a, b)=>a*b); 
+}
