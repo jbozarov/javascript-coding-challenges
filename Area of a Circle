@@ -1,0 +1,7 @@
+
+
+
+var circleArea = function(radius) {
+  if (radius<=0 || typeof radius !== 'number') return false; 
+  return Number((Math.PI*Math.pow(radius, 2)).toFixed(2)); 
+};
