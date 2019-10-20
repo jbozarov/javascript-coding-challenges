@@ -1,0 +1,5 @@
+Given circle with radius r, determine the area of largest square that can fit in the circle. 
+
+function areaLargestSquare(r) {
+  return 2*Math.pow(r, 2); 
+}
