@@ -1,0 +1,8 @@
+Write the function squareArea ( or square_area ) that finds the area of the red square when you have the 
+length of the circular arc A.
+
+Graph
+
+function squareArea(A){
+  return Number((4*A*A/Math.pow(Math.PI, 2)).toFixed(2)); 
+}
