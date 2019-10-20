@@ -1,0 +1,13 @@
+class Guesser {
+   constructor(number, lives) {
+     this.number = number;
+     this.lives = lives;
+   }
+   
+   guess(n) {
+     if (this.lives<=0) throw "Error"; 
+     else if (n!==this.number)
+        this.lives--; 
+        return this.number===n;  
+   }
+ }
