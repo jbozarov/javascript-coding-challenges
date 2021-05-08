@@ -17,6 +17,5 @@ function sumStr(a,b) {
     b = 0; 
   }
   const result = (parseInt(a) + parseInt(b)).toString(); 
-  console.log(result, a, b); 
   return result; 
 }
