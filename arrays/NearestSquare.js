@@ -1,4 +1,4 @@
-Find nearest square number (neareest to n); 
+// Find nearest square number (neareest to n); 
 
 function nearestSq(n){
   var i=n; 
