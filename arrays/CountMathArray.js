@@ -1,4 +1,4 @@
-count monkeys: count till n and return array; 
+// count monkeys: count till n and return array; 
 
 
 function monkeyCount(n) {

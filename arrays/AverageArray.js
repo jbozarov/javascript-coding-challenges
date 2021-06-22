@@ -1,4 +1,4 @@
-ASC Week 1 Challenge 5 (Medium #2)
+/* ASC Week 1 Challenge 5 (Medium #2)
 Create a function that takes a 2D array as an input, and outputs another array that contains the average values for 
 the numbers in the nested arrays at the corresponding indexes.
 
@@ -22,7 +22,7 @@ And another one:
 4th array: [ 67,  23,    1,   88,   34]
               |    |     |     |     |
               v    v     v     v     v
-average:   [22.5, 11, 38.75, 38.25, 19.5]
+average:   [22.5, 11, 38.75, 38.25, 19.5] */ 
 
 
 
