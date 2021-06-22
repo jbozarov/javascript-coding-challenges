@@ -1,4 +1,4 @@
-reverse the given word 
+// reverse the given word 
 
 
 function solution(str){
