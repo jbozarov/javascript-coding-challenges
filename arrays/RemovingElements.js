@@ -1,4 +1,4 @@
-Remove every second element 
+// Remove every second element 
 
 
 function removeEveryOther(arr){
