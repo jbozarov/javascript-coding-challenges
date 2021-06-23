@@ -1,0 +1,15 @@
+accum("abcd") -> "A-Bb-Ccc-Dddd"
+accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+accum("cwAt") -> "C-Ww-Aaa-Tttt"
+
+
+
+
+function accum(s){
+	var result = []; 
+	var arr = s.split(''); 
+	for (var i=0; i<arr.length; i++){
+		result.push(arr[i].toUpperCase()+arr[i].toLowerCase().repeat(i))
+	}
+	return result.join('-'); 
+}

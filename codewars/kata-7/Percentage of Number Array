@@ -1,0 +1,27 @@
+Given an array of numbers, write a function, (percentageSumArray), that returns the percentage of the sum of the 
+array, with the percentage set as the array length.
+
+Note
+
+the array length should ONLY be based on elements not equal to zero.
+
+if an empty array, null, or percentageSumArray less than or equal zero, return false.
+
+round to two decimal places
+
+
+- round using toFixed
+
+[23, 3, 4, 66, 0, 7, 1] => sum = 104, percentage = 6%, percentageSumArray = 6.24   
+null => false
+
+
+
+function percentageSumArray(arr){
+  if (arr==null || arr.reduce((a, b)=>a+b, 0)<=0) return false; 
+  else if (arr!==null&&arr.length<1) return false; 
+  else if(!arr.every(n => typeof n === 'number')) return false
+  var len = arr.filter(a=>a!=0).length 
+  var result = arr.reduce((a, b)=>a+b, 0)*len/100;  
+  return Number(result.toFixed(2)); 
+}

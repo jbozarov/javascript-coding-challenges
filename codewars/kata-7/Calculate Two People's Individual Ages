@@ -1,0 +1,12 @@
+Create a function that takes in the sum and age difference of two people, calculates their individual ages, and 
+returns a pair of values if those exist or an empty values if:
+
+sum < 0
+difference < 0
+Either of the calculated ages come out to be negative
+
+
+function getAges(sum,difference){
+  if (difference<0 || sum<0 || sum<difference) return null; 
+  return [sum-(sum-difference)/2, (sum-difference)/2]
+};

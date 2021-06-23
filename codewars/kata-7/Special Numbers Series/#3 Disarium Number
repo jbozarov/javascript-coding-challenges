@@ -1,0 +1,16 @@
+Definition
+Disarium number is the number that The sum of its digits powered with their respective positions is equal to the number itself.
+
+Explanation:
+disariumNumber(89); 
+Since , (8 to power 1) + (9 to the power of 2) = 89 , thus output is "Disarium !!"
+
+
+function disariumNumber(n){
+   var arr = n.toString().split('');
+	 var count=0; 
+	 for (var i=0; i<arr.length; i++){
+		 count = count+Math.pow(arr[i], i+1); 
+	 }
+	 return count==n? "Disarium !!" : "Not !!"; 
+}

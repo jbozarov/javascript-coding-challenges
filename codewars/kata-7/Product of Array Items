@@ -1,0 +1,9 @@
+Calculate the product of all elements in an array.
+If the array is null or is empty, the function should return null.
+
+
+
+function product(values) {
+	if (values !== null && values.length<1 || values == null) return null; 
+  return values.reduce((a, b)=>a*b, 1); 
+}

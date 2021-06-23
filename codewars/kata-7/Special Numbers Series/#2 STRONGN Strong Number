@@ -1,0 +1,21 @@
+Definition
+Strong number is the number that the sum of the factorial of its digits is equal to number itself.
+
+For example: 145, since
+1! + 4! + 5! = 1 + 24 + 120 = 145
+0!==1  //(zero factorial is equal to 1); 
+
+function factorial (n){
+	var count = 1;
+	if (n==0) return 1;  
+	else if (n==1){
+		return count; 
+	}
+	else return n*(factorial(n-1)); 
+}
+
+function strong(n) {
+  var num = n.toString().split('').map(a=>Number(a)); 
+	const fact = num.map((a)=>factorial(a)); 
+	return fact.reduce((a, b)=>a+b)==n? "STRONG!!!!" : "Not Strong !!"; 
+}

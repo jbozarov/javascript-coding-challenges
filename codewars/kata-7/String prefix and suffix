@@ -1,0 +1,38 @@
+In this Kata, you will be given a string and your task will be to return the length of the longest prefix that is 
+also a suffix. A prefix is the start of a string while the suffix is the end of a string. For instance, the prefixes of 
+the string "abcd" are ["a","ab","abc"]. The suffixes are ["bcd", "cd", "d"]. You should not overlap the prefix and suffix.
+
+for example:
+solve("abcd") = 0, because no prefix == suffix. 
+solve("abcda") = 1, because the longest prefix which == suffix is "a".
+solve("abcdabc") = 3. Longest prefix which == suffix is "abc".
+solve("aaaa") = 2. Longest prefix which == suffix is "aa". You should not overlap the prefix and suffix
+solve("aa") = 1. You should not overlap the prefix and suffix.
+solve("a") = 0. You should not overlap the prefix and suffix.
+
+
+
+
+function solve (str){
+	var rev = str.split('').reverse().join(''); 
+	var prefix = [];
+	var suffix = [];  
+	
+  for (var i=1; i<str.length; i++){
+		prefix.push(str.slice(0, i));
+		suffix.push(rev.slice(0, i))
+	}
+
+	var count=[]
+	for (var k=0; k<prefix.length/2; k++){
+		if (prefix[k]==suffix[k] || prefix[k].split('').reverse().join('')==suffix[k]){
+			count.push(prefix[k])
+		}
+	}
+   var result = count.sort((a, b)=>b.length-a.length); 
+	 let need = result[0]; 
+
+	 if (result.length<1) return 0; 
+	 else if (result.length==1) return need.length; 
+	 else return need.length; 
+}

@@ -1,0 +1,42 @@
+Create a moreZeros function which will receive a string for input, and return an array containing only the characters 
+from that string whose binary representation of its ASCII value consists of more zeros than ones.
+
+You should remove any duplicate characters, keeping the first occurence of any such duplicates, so they are in the same order 
+in the final array as they first appeared in the input string.
+
+Examples
+
+'abcde' === ["1100001", "1100010", "1100011", "1100100", "1100101"]
+               True       True       False      True       False
+
+        --> ['a','b','d']
+
+'DIGEST'--> ['D','I','E','T']
+All input will be valid strings of length > 0.
+
+
+
+
+function moreZeros(s){
+	var uniq = [...new Set(s.split(''))]; 
+  var arr = uniq.map(a=>a.charCodeAt(0));
+	var bin = arr.map(a=>Number(a.toString(2))); 
+	var spl = bin.map(a=>a.toString().split(''));
+	var zeros = spl.map(a=>a.filter(b=>b=='0')); 
+	var zeroCount = zeros.map(a=>a.length); 
+	var allCount =  spl.map(a=>a.length);
+	var results = [];  
+	for (var i=0; i<zeroCount.length; i++){
+		if (zeroCount[i]>(allCount[i]-zeroCount[i])) {
+			results.push(true);
+		}
+		else results.push(false); 
+	}
+	  var final=[]; 
+	  for (var i=0; i<uniq.length; i++){
+			if (results[i]==true){
+				 final.push(uniq[i]); 
+			}
+		}
+	return final; 
+}

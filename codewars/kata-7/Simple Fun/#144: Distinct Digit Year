@@ -1,0 +1,16 @@
+Task
+The year of 2013 is the first year after the old 1987 with only distinct digits.
+
+Now your task is to solve the following problem: given a year number, find the minimum year number which is strictly 
+larger than the given one and has only distinct digits.
+
+function distinctDigitYear(year) {
+
+   var arr = year.toString().split('').map(a=>Number(a));  
+   const dist = arr.filter((val, ind, arr)=>arr.indexOf(val)==ind);
+    var i=year+1; 
+    while (i.toString().split('').filter((v, i, a)=>a.indexOf(v)==i).length!==4) {
+      i++;  
+    }
+   return i;  
+ }

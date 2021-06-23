@@ -1,0 +1,29 @@
+Given a string, capitalize the letters that occupy even indexes and odd indexes separately, and return as 
+shown below. Index 0 will be considered even.
+
+For example, capitalize("abcdef") = ['AbCdEf', 'aBcDeF']. See test cases for more examples.
+
+The input will be a lowercase string with no spaces.
+
+
+
+function capitalize(s){
+	var a = []
+	var b = []
+	var arr = s.toLowerCase().split(''); 
+	for (var i=0; i<arr.length; i++){
+		if (i%2===0){
+			 a.push(arr[i].toUpperCase())
+		}
+		else a.push(arr[i]); 
+	}
+
+	for (var m=0; m<arr.length; m++){
+		if (m%2===0){
+			b.push(arr[m])
+		}
+		else b.push(arr[m].toUpperCase()); 
+	}
+
+  return [a.join(''), b.join('')]; 
+};

@@ -1,0 +1,18 @@
+Task
+Given a string str, reverse it omitting all non-alphabetic characters.
+Example
+For str = "krishan", the output should be "nahsirk".
+For str = "ultr53o?n", the output should be "nortlu".
+Input/Output
+
+A string consists of lowercase latin letters, digits and symbols.
+
+[output] a string
+
+
+
+function reverseLetter(str){
+	var char = str.replace(/\d/g, '').split('').reverse().join('');
+	var num = char.replace(/\W/g, '');
+	return num.replace(/\_/g, '');   
+}

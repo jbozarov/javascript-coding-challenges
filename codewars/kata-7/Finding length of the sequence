@@ -1,0 +1,10 @@
+
+
+
+var lengthOfSequence = function (arr, n) {
+  var array = arr.filter((a)=>a==n, 1);
+  if (arr.indexOf(n)==-1 || arr.indexOf(n)==arr.lastIndexOf(n)) return 0; 
+   
+  else if (array.length>2) return 0; 
+  return arr.lastIndexOf(n)-arr.indexOf(n)+1;
+};

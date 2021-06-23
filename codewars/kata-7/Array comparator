@@ -1,0 +1,17 @@
+You have two arrays in this kata, every array contain only unique elements. Your task is to calcualate number of elements 
+in first array which also are in second array.
+
+
+
+
+function matchArrays(v,r){
+	var arr = []; 
+	for (var i=0; i<v.length; i++){
+		for (var k=0; k<r.length; k++){
+			if (v[i]==r[k]){
+				arr.push(v[i]); 
+			}
+		}
+	}  
+	return arr.length; 
+}

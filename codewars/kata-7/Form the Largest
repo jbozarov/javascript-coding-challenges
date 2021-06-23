@@ -1,0 +1,7 @@
+Input >> Output Examples:
+maxNumber (213) ==> return (321)
+
+
+const maxNumber = (n) => {
+	return Number(n.toString().split('').sort((a, b)=>b-a).join(''));  
+}

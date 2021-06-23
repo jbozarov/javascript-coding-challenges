@@ -1,0 +1,24 @@
+In front of you there's a rope of length len. Your task is to cut the rope into n pieces of "equal" length.
+Return an array of each piece's length. Order is NOT important.
+
+Requirements:
+Each piece should be an integer (rounded to 0dp).
+The difference between each piece should be diff <= 1.
+
+Example:
+cut(100, 2) => [50, 50]
+cut(100, 3) => [33, 33, 34] 
+
+
+
+var cut = function(len, num) {
+	var arr =[]; 
+	for (var i=1; i<=num; i++){
+		arr.push(Math.floor(len/num))
+	}
+  var sum = arr.reduce((x, y)=>x+y); 
+	for (var i=0; i<len-sum; i++){
+		arr[i]=arr[i]+1; 
+	}
+  return arr; 
+}

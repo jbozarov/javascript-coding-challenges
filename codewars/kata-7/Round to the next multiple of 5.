@@ -1,0 +1,10 @@
+function roundToNext5(n){
+  if (n%5==0) return n; 
+	var i=1;
+	while ((n+i)%5!==0){
+		i++; 
+	}
+  return n+i; 
+  //console.log(n+i)
+  
+}

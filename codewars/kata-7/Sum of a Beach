@@ -1,0 +1,11 @@
+Beaches are filled with sand, water, fish, and sun. Given a string, calculate how many times the words "Sand", 
+"Water", "Fish", and "Sun" appear without overlapping (regardless of the case).
+
+
+
+function sumOfABeach(beach) {
+   var lower = beach.toLowerCase(); 
+	 var searchable = /(sand|water|fish|sun)/g; 
+	 if (lower.match(searchable)==null) return 0; 
+   return lower.match(searchable).length;
+}

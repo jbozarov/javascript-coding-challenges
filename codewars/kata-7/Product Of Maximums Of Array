@@ -1,0 +1,7 @@
+
+
+
+function maxProduct(numbers, size){
+  var sorted = numbers.sort((a, b)=>b-a); 
+	return sorted.slice(0, size).reduce((x, y)=>x*y); 
+}

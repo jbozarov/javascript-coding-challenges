@@ -1,0 +1,7 @@
+function maker() {
+  var numbers = [];
+  for( var i = 0; i <= 25; i++ ) {
+    numbers.push(i); 
+  }
+  
+  return numbers;

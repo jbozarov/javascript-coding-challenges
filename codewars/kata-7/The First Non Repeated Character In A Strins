@@ -1,0 +1,15 @@
+
+
+
+
+function firstNonRepeated(s) {
+  var arr = s.split(''); 
+  for (var i=0; i<arr.length; i++){
+    var check = arr.slice(i+1).concat(arr.slice(0, i))
+		console.log(check, check.includes(arr[i]), arr[i]); 
+    if (!check.includes(arr[i])){
+			 return arr[i]
+  }
+}
+  return null; 
+}

@@ -1,0 +1,5 @@
+check if number is square; 
+
+var isSquare = function(n){
+  return Math.sqrt(n) == Number.parseInt(Math.sqrt(n)); 
+}

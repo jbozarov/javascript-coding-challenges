@@ -1,0 +1,32 @@
+Definition
+Balanced number is the number that * The sum of all digits to the left of the middle digit(s) and the sum of all digits to 
+the right of the middle digit(s) are equal*.
+
+If the number has an odd number of digits then there is only one middle digit, e.g. 92645 has middle digit 6; otherwise, 
+there are two middle digits , e.g. 1301 has middle digits 3 and 0
+
+The middle digit(s) should not be considered when determining whether a number is balanced or not, e.g 413023 is a balanced 
+number because the left sum and right sum are both 5.
+
+
+
+function balancedNum(number){
+	  var num = number.toString();  
+		if (num.length<=2) return 'Balanced'; 
+		else if (num.split('').every((v, i, array)=>v===array[0])) return 'Balanced'; 
+    else if (num.length%2==0){
+		  var arr = num.split(num.charAt(num.length/2-1)+num.charAt(num.length/2)).map(a=>a.split('')); 
+			if (arr[0].map(a=>Number(a)).reduce((a, b)=>a+b)==arr[1].map(a=>Number(a)).reduce((a, b)=>a+b)){
+				return "Balanced"; 
+			}			
+			else return "Not Balanced"; 
+		}
+		else if (num.length%2!==0){
+			var arr1 = num.split(num.charAt(num.length/2-0.5)).map(a=>a.split(''));
+			if (arr1[0].map(a=>Number(a)).reduce((a, b)=>a+b)==arr1[1].map(a=>Number(a)).reduce((a, b)=>a+b)){
+				return "Balanced"; 
+			}			
+			else return "Not Balanced";
+		}
+		return num; 
+}

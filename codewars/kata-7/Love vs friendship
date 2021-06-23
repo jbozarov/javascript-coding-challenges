@@ -1,0 +1,34 @@
+If　a = 1, b = 2, c = 3 ... z = 26
+
+Then l + o + v + e = 54
+
+and f + r + i + e + n + d + s + h + i + p = 108
+
+So friendship is twice stronger than love :-)
+
+The input will always be in lowercase and never be empty.
+
+
+
+
+Solution: 
+
+function wordsToMarks(string){
+   var arr = [' ']; 
+	 for (var i=97; i<=122; i++){
+	 arr.push(String.fromCharCode(i));  
+ }
+ var str = string.split(''); 
+ 
+ var result = 0; 
+ for (var i=0; i<str.length; i++){
+	  for (var m=0; m<arr.length; m++){
+			if (str[i]==arr[m]) {
+				result+=arr.indexOf(arr[m]); 
+			}
+		}
+ } 
+
+  
+ return result; 
+}

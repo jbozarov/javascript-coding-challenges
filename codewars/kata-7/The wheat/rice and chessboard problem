@@ -1,0 +1,6 @@
+function squaresNeeded(grains){
+   if (grains==0) return 0; 
+   else if (grains ==1) return 1;
+   var result = Math.log(grains*2)/Math.log(2); 
+   return Math.floor(result); 
+}

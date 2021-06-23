@@ -1,0 +1,11 @@
+Definition
+A Tidy number is a number whose digits are in non-decreasing order.
+
+tidyNumber (32) ==> return (false)
+
+
+function tidyNumber(n){
+	var arr = n.toString().split(''); 
+  const str = arr.sort((a, b)=>a-b).join(''); 
+	return str == n.toString(); 
+}

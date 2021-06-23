@@ -1,0 +1,23 @@
+You will be given two inputs: a string of words and a letter.For each string, return the alphabetic character 
+after every instance of letter(case insensitive).
+
+If there is a number, punctuation or underscore following the letter, it should not be returned.
+
+If letter = 'r':
+comes_after("are you really learning Ruby?") # => "eenu"
+comes_after("Katy Perry is on the radio!")   # => "rya"
+comes_after("Pirates say arrrrrrrrr.")       # => "arrrrrrrr"
+comes_after("r8 your friend")                # => "i"
+
+
+
+function comes_after(str,l) {
+  var result=''; 
+	for (var i=0; i<str.length; i++){
+		if (str.charAt(i)==l.toLowerCase() || str.charAt(i)==l.toUpperCase()){
+			result+=str.charAt(i+1); 
+		}
+	}
+	if (result.match(/[A-z]/g)==null) return ''; 
+	else return result.match(/[A-z]/g).filter(x=>x!=='_').join(''); 
+}
