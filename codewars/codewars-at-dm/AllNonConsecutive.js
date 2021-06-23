@@ -1,4 +1,4 @@
-Your task is to find all the elements of an array that are non consecutive.
+/* Your task is to find all the elements of an array that are non consecutive.
 
 A number is non consecutive if it is not exactly one larger than the previous element in the array. The first element gets a pass and is never considered non consecutive.
 
@@ -15,6 +15,7 @@ E.g., for the above array the result should be:
   {i: 7, n:10}
 ]
 
+*/ 
 
 function allNonConsecutive (arr) {
 	var res = []; 
